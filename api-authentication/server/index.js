@@ -70,9 +70,9 @@ app.post('/api/auth/sign-in', (req, res, next) => {
           const payload = { userId, username };
           const token = jwt.sign(payload, process.env.TOKEN_SECRET);
           res.status(200).json({ token, user: payload });
-        })
-        .catch(error => next(error));
-    });
+        });
+    })
+    .catch(error => next(error));
 
   /**
    * Query the database to find the "userId" and "hashedPassword" for the "username".
