@@ -9,5 +9,4 @@ tasks.addEventListener('click', event => {
     console.log('closest .task-list-item', taskItem);
     taskItem.remove();
   }
-
 });
